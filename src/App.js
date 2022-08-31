@@ -1,5 +1,6 @@
 import logo from './logo.svg';
 import './App.css';
+import './components/navbar/Content.scss';
 import { useState } from 'react';
 import { Routes, Route, Link as RouterLink } from "react-router-dom";
 import Homepage from './components/pages/homepage/Homepage';
@@ -10,18 +11,18 @@ import { AcmeLogo } from "./components/navbar/AcmeLogo.js";
 
 import env from "react-dotenv";
 
-
 function App() {
 
   const collapseItems = [
     "หน้าแรก",
-    "Customers",
-    "Pricing",
-    "Company",
+    "ข้อมูลของเมือง",
+    "เติมเงิน",
+    "กิจกรรม",
   ];
 
   return (
-    <Layout>
+    <div className='text-prompt'>
+    <Layout className="text-prompt">
       <Navbar isBordered variant="floating">
       <Navbar.Toggle showIn="xs" />
         <Navbar.Brand>
@@ -32,17 +33,17 @@ function App() {
         </Navbar.Brand>
         <Navbar.Content enableCursorHighlight hideIn="xs">
           <Navbar.Link isActive href="#">หน้าแรก</Navbar.Link>
-          <Navbar.Link href="#">Customers</Navbar.Link>
-          <Navbar.Link href="#">Pricing</Navbar.Link>
-          <Navbar.Link href="#">Company</Navbar.Link>
+          <Navbar.Link href="#">ข้อมูลของเมือง</Navbar.Link>
+          <Navbar.Link href="#">เติมเงิน</Navbar.Link>
+          <Navbar.Link href="#">กิจกรรม</Navbar.Link>
         </Navbar.Content>
         <Navbar.Content>
           <Navbar.Link color="inherit" href="#">
-            Login
+            เข้าสู่ระบบ
           </Navbar.Link>
           <Navbar.Item>
             <Button auto flat as={Link} href="#">
-              Sign Up
+              สมัครสมาชิก
             </Button>
           </Navbar.Item>
         </Navbar.Content>
@@ -70,6 +71,7 @@ function App() {
         </Navbar.Collapse>
       </Navbar>    
     </Layout>
+    </div>
   );
 }
 

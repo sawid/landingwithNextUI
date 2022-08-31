@@ -1,5 +1,6 @@
 import React from 'react'
 import { Card, Col, Row, Button, Text, Grid } from "@nextui-org/react";
+import env from "react-dotenv";
 
 const Card1 = () => {
     return (
@@ -8,10 +9,10 @@ const Card1 = () => {
             <Card.Header css={{ position: "absolute", zIndex: 1, top: 5 }}>
                 <Col>
                     <Text size={12} weight="bold" transform="uppercase" color="#9E9E9E">
-                        Your day your way
+                        โลดแล่นไปกับ
                     </Text>
                     <Text h3 color="white">
-                        Your checklist for better sleep
+                        ใช้ชีวิตในเมืองแห่งการผจญภัย
                     </Text>
                 </Col>
             </Card.Header>
